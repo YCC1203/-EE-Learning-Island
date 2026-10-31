@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#dff7f5" />
+  <meta name="description" content="以互動島嶼探索國立臺灣海洋大學電機工程學系的大一至大四課程、六大專業領域及輔系資訊。" />
+  <title>電機探索島｜海大電機互動式課程地圖</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body data-time="day">
+  <div class="site-shell" id="top">
+    <header class="topbar wrap">
+      <a class="brand" href="#top" aria-label="電機探索島首頁">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 52 52"><path d="M6 31c8-8 13-8 20 0s13 8 20 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="m15 23 11-16 11 16-11 4z" fill="currentColor" opacity=".86"/><circle cx="26" cy="37" r="3" fill="currentColor"/></svg></span>
+        <span><strong>電機探索島</strong><small>NTOU EE · ISLAND GUIDE</small></span>
+      </a>
+      <nav class="main-nav" aria-label="主選單">
+        <a href="#explore">探索島嶼</a><a href="#domains">六大領域</a><a href="#minor">輔系指南</a>
+      </nav>
+      <button type="button" class="time-button" id="timeButton" aria-label="切換島嶼日夜景色"><span aria-hidden="true" id="timeIcon">☀</span><span id="timeLabel">白天</span><span class="small-arrows">↻</span></button>
+    </header>
+
+    <main>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-main">
+          <div class="eyebrow"><span class="status-dot"></span> 國立臺灣海洋大學 · 電機工程學系</div>
+          <h1 id="hero-title">把四年電機旅程，<br /><em>變成一座可以探索的島。</em></h1>
+          <p>從大一的第一行程式，到大四尋找自己的專業方向。跟著島上的學生與系主任，一站一站認識課程、核心能力與六大領域。</p>
+          <div class="hero-actions"><a class="primary-action" href="#explore">開始探索 <span aria-hidden="true">↗</span></a><a class="secondary-action" href="#how-to">怎麼玩？ <span aria-hidden="true">↘</span></a></div>
+        </div>
+        <div class="hero-side" aria-label="探索資訊">
+          <div class="tiny-sun" aria-hidden="true">✳</div>
+          <span class="hero-side-overline">YOUR ADVENTURE</span>
+          <div class="hero-side-number">04 <span>個年級島</span></div>
+          <div class="hero-side-rule"></div>
+          <div class="hero-side-number">06 <span>個專業領域</span></div>
+          <div class="hero-side-bottom">每個方向，都有自己的風景。<span class="wavy" aria-hidden="true">﹏﹏﹏</span></div>
+        </div>
+      </section>
+
+      <section class="explore-section wrap" id="explore" aria-labelledby="explore-title">
+        <div class="section-topline"><span class="section-number">01 / THE ISLAND</span><span class="decor-line"></span><span class="section-tip">點選島嶼或學生，開始冒險 <span aria-hidden="true">✦</span></span></div>
+        <div class="explore-heading"><div><h2 id="explore-title">你的大學四年，就在這片海上。</h2><p>島嶼就是年級，走過的橋是學習的延續。</p></div><button class="outline-button director-launch" id="directorLaunch" type="button"><span class="icon-circle">☏</span> 找系主任聊聊</button></div>
+        <div class="explorer">
+          <div class="world-column">
+            <div class="map-toolbar"><div class="map-toolbar-left"><span class="live-mark"><i></i> LIVE CAMPUS</span><span class="map-caption">互動式課程地圖</span></div><div class="year-switch" role="group" aria-label="選擇年級"><button type="button" class="year-tab active" data-choose-year="1" aria-pressed="true">大一</button><button type="button" class="year-tab" data-choose-year="2" aria-pressed="false">大二</button><button type="button" class="year-tab" data-choose-year="3" aria-pressed="false">大三</button><button type="button" class="year-tab" data-choose-year="4" aria-pressed="false">大四</button></div></div>
+            <div class="map-scroller" id="mapScroller" role="region" aria-label="四個年級互動地圖，可左右捲動" tabindex="0">
+              <div class="world-stage"><svg id="worldMap" viewBox="0 0 1180 670" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="四座代表大一、大二、大三、大四的島嶼，中央有系主任導覽站。按 Tab 可選取島嶼。"></svg></div>
+              <div class="map-overlay top-left"><span class="compass">✧</span><span>EE ARCHIPELAGO <b> / 001</b></span></div>
+              <div class="map-overlay bottom-left"><span class="pulse-dot"></span> 正在探索 <strong id="mapStatus">大一・探索起點</strong></div>
+              <div class="map-overlay bottom-right">拖曳捲動地圖 · 點擊探索 <span aria-hidden="true">⌁</span></div>
+            </div>
+            <div class="director-strip"><div class="director-portrait" aria-hidden="true"><span class="portrait-hair"></span><span class="portrait-face">◡</span><span class="portrait-glasses">◎ ◎</span></div><div class="director-words"><div class="director-heading">系主任 <span>· 島嶼導覽員</span></div><p id="directorLine" aria-live="polite">歡迎來到電機探索島！先點選任何一座島，看看這個年級會遇見哪些課程吧。</p></div><button class="next-talk" type="button" id="nextTalk" aria-label="系主任介紹下一個年級">下一站 <span aria-hidden="true">→</span></button></div>
+          </div>
+
+          <aside class="inspector" aria-labelledby="inspector-title">
+            <div class="inspector-top"><div><span class="inspector-kicker" id="inspectorKicker">YEAR 01 / FOUNDATION</span><h3 id="inspector-title">大一 · 探索起點</h3></div><div class="year-counter" id="yearCounter">01<span>/04</span></div></div>
+            <p class="inspector-desc" id="inspectorDesc"></p>
+            <div class="student-quote"><span class="student-quote-icon" aria-hidden="true">✳</span><p id="studentQuote"></p><small id="studentName">大一學生 · 小海</small></div>
+            <div class="course-progress"><span><i class="progress-icon">✦</i> 我的課程探索足跡</span><strong id="progressText">0 / 12</strong></div><div class="progress-track"><span id="progressBar" style="width:0%"></span></div>
+            <div class="course-heading-row"><h4>這一年會遇見的課</h4><span id="courseCount"></span></div>
+            <div id="yearCourseList" class="semester-lists"></div>
+            <div class="inspector-bottom"><span>依上傳之年級課程關聯圖整理，並非個人正式修課清單。</span><button id="nextYear" type="button">前往下一座島 <span aria-hidden="true">→</span></button></div>
+          </aside>
+        </div>
+        <div class="how-to" id="how-to"><span class="how-to-label">HOW TO PLAY / 島嶼玩法</span><div><b>01</b> 點選年級島</div><div><b>02</b> 聽系主任解說</div><div><b>03</b> 點擊課程，留下探索足跡</div><div><b>04</b> 找出你的專業方向</div></div>
+      </section>
+
+      <section class="domains-section wrap" id="domains" aria-labelledby="domains-title">
+        <div class="section-topline"><span class="section-number">02 / SIX DIRECTIONS</span><span class="decor-line"></span><span class="section-tip">不同領域，串起同一座電機世界</span></div>
+        <div class="content-header"><div><span class="mini-kicker">FIND YOUR PATH</span><h2 id="domains-title">六大領域，哪一個是你的方向？</h2><p>依課程關聯圖列示的六個專業領域；點開卡片，看看它在研究什麼。</p></div><div class="special-number" aria-hidden="true">06<span>PATHS</span></div></div>
+        <div class="domain-grid" id="domainGrid"></div>
+        <p class="source-inline"><span aria-hidden="true">ⓘ</span> 領域名稱取自附件；領域介紹與關聯課程屬網站學習導覽，並非官方課程配當或學程修讀規定。</p>
+      </section>
+
+      <section class="journey-section wrap" aria-labelledby="journey-title"><div class="journey-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="planet-chip">π</span><span class="planet-chip two">∿</span><span class="planet-chip three">⌘</span><span class="journey-stars">✧　✦　·　✳</span></div><div class="journey-copy"><span class="mini-kicker">CONNECT THE DOTS</span><h2 id="journey-title">學過的每一門課，<br />都在為下一步鋪路。</h2><p>從微積分、物理與程式語言，到電路學、電子學、電磁學，再走向控制、通訊、半導體與其他領域。你會慢慢找到自己的興趣，也看見這些知識如何彼此連結。</p><button id="openCourseSearch" class="dark-action" type="button">打開課程索引 ↗</button></div></section>
+
+      <section class="minor-section wrap" id="minor" aria-labelledby="minor-title"><div class="section-topline"><span class="section-number">03 / MORE TO EXPLORE</span><span class="decor-line"></span><span class="section-tip">不只主修，也可以認識輔系</span></div><div class="minor-layout"><div class="minor-left"><span class="mini-kicker">MINOR PROGRAM</span><h2 id="minor-title">也想跨進電機的世界？<br /><em>輔系從這裡開始。</em></h2><p>上傳的輔系必修科目表列出程式設計、電磁學、電路學、電子學等課程，以及修課順序與附加條件。</p><button type="button" class="primary-action smaller" id="minorExpand" aria-expanded="false" aria-controls="minorDetails">查看輔系課程表 <span aria-hidden="true">↘</span></button></div><div class="minor-right"><div class="fact-head"><span>附件標示</span><span>FOR REFERENCE</span></div><div class="fact-value">25 <small>學分</small></div><p>輔系科目表列「至少應修 25 學分」。表中八門、每門 3 學分的合計卻為 24 學分，請向系辦核對。</p><div class="fact-divider"></div><div class="fact-footer"><span>非授予工學士者</span><strong>另加修工程數學 6 學分</strong></div></div></div><div class="minor-details" id="minorDetails" hidden><div class="minor-details-head"><h3>輔系必修科目・附件原表整理</h3><span>點擊課名可查看說明</span></div><div id="minorTableHolder"></div><div class="alert-note"><b>附件待核對事項</b><p>原表同時標示「至少應修 25 學分」與八門各 3 學分（合計 24 學分），另有非工學士工程數學 6 學分規定；請依系辦核定的適用年度公告確認。</p></div></div></section>
+
+      <section class="notice wrap" aria-labelledby="notice-title"><div><span class="mini-kicker">A NOTE BEFORE YOU SAIL</span><h2 id="notice-title">課程資訊以正式公告為準</h2><p>此網站是依使用者提供的三份電機系課程圖／輔系表製作的互動導覽原型，不代表系所正式課程系統。兩份核心課程關聯圖分別標有「六選三（必選）」與「六選四（必選）」，選課與畢業門檻應向系辦確認適用入學年度。</p></div><a href="https://ee.ntou.edu.tw/" target="_blank" rel="noopener noreferrer">海大電機系網站 <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="footer wrap"><div class="footer-brand">✳ 電機探索島 <small>THE EE ISLAND</small></div><p>國立臺灣海洋大學電機工程學系 · 非官方互動示範作品</p><a href="#top">回到島嶼頂端 ↑</a></footer>
+  </div>
+
+  <dialog class="modal" id="infoDialog" aria-labelledby="dialogTitle"><div class="modal-header"><span class="mini-kicker" id="dialogKicker">COURSE CARD</span><button type="button" class="modal-close" id="closeDialog" aria-label="關閉視窗">×</button></div><h2 id="dialogTitle"></h2><p id="dialogBody"></p><div id="dialogMeta" class="dialog-meta"></div><button type="button" class="modal-done" id="dialogDone">了解了，繼續探索 →</button></dialog>
+  <dialog class="modal index-modal" id="indexDialog" aria-labelledby="indexTitle"><div class="modal-header"><span class="mini-kicker">YOUR COURSE ATLAS</span><button type="button" class="modal-close" id="indexClose" aria-label="關閉課程索引">×</button></div><h2 id="indexTitle">課程索引</h2><p>依大一至大四的課程關聯圖整理，可搜尋或篩選年級。相同課名在不同學期可能重複出現。</p><div class="search-controls"><label for="courseSearch" class="visually-hidden">搜尋課程名稱</label><input id="courseSearch" type="search" placeholder="搜尋：電子學、電磁、程式..." autocomplete="off" /><label for="yearFilter" class="visually-hidden">選擇年級</label><select id="yearFilter"><option value="all">全部年級</option><option value="1">大一</option><option value="2">大二</option><option value="3">大三</option><option value="4">大四</option></select></div><div id="courseIndexResults" class="search-results"></div><p class="index-disclaimer">註：本表僅反映上傳的年級關聯圖，不含各項目正式必選修認定、學分與最新開課資料。</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
